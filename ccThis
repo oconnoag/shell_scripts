@@ -1,0 +1,8 @@
+#! /bin/bash
+# Runs a simple macro to compile and run a c program with
+# the gc+ compiler
+
+# Inputs .c filename
+# Then, creates an exe file using that filename
+
+gcc -std=c11  -o $1 $1.c && ./$1

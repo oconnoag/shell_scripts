@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Converts avi file(s) to mp4 using ffmpeg
+#    Warning: Deletes original avi files after a successful conversion
+#    Usage:  ./avi_to_mp4 [filename]
+#    Example:  ./avi_to_mp4 *.avi
+
+for arg; do
+    file_name=$(echo "$arg" | cut -d '.' -f 1)
+    ffmpeg -i "${file_name}.avi" "${file_name}.mp4" && rm "${file_name}.avi"
+done

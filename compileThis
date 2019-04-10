@@ -1,0 +1,8 @@
+#! /bin/bash
+# Runs a simple macro to compile and run a c++ program with
+# the g++ compiler
+
+# Inputs .cpp filename
+# Then, creates an exe file using that filename
+
+g++ -std=c++11  -o $1 $1.cpp && ./$1
