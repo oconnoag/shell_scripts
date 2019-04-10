@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-# Used for many xpt files
-
-# foreach i (*)
-# python -m xport $i.XPT > $i.csv && rm $1.XPT
-# end
+# Used for converting one to many xpt files
+# Usage example: 
+#   xpt2csv filename.xpt
+#   xpt2csv *.xpt
 
 for arg; do
     file_name=$(echo "$arg" | cut -d '.' -f 1)
